@@ -17,7 +17,7 @@ const SignUpForm = () => {
 
   return (
     <>
-      <div className="max-w-md mx-auto mt-16 rounded-2xl shadow-md bg-white px-6  py-8">
+      <div className="max-w-md mx-auto rounded-2xl shadow-md bg-white px-6 py-8">
         <h2 className="text-3xl font-semibold text-center">
           Create a new account
         </h2>
@@ -33,7 +33,7 @@ const SignUpForm = () => {
               value={form.fullName}
               onChange={handleChange}
               placeholder="Full Name"
-              className="w-full rounded-lg bg-[#f7f7fa] border border-[#dddddd] focus:border-[#f7be7a] focus:border-2 py-2.5 px-4 text-base focus:outline-none transition-colors duration-500"
+              className="w-full rounded-lg placeholder:text-sm bg-[#f7f7fa] border border-[#dddddd] focus:border-[#f7be7a] focus:border-2 py-2.5 px-4 text-base focus:outline-none transition-colors duration-500"
             />
           </div>
           <div className="mb-3">
@@ -44,7 +44,7 @@ const SignUpForm = () => {
               value={form.email}
               onChange={handleChange}
               placeholder="Eg: johndoe@gmail.com"
-              className="w-full rounded-lg bg-[#f7f7fa] border border-[#dddddd] focus:border-[#f7be7a] focus:border-2 py-2.5 px-4 text-base focus:outline-none transition-colors duration-500"
+              className="w-full rounded-lg placeholder:text-sm bg-[#f7f7fa] border border-[#dddddd] focus:border-[#f7be7a] focus:border-2 py-2.5 px-4 text-base focus:outline-none transition-colors duration-500"
             />
           </div>
           <div className="mb-3">
@@ -55,7 +55,7 @@ const SignUpForm = () => {
               value={form.phone}
               onChange={handleChange}
               placeholder="00000-00000"
-              className="w-full rounded-lg bg-[#f7f7fa] border border-[#dddddd] focus:border-[#f7be7a] focus:border-2 py-2.5 px-4 text-base focus:outline-none transition-colors duration-500"
+              className="w-full rounded-lg placeholder:text-sm bg-[#f7f7fa] border border-[#dddddd] focus:border-[#f7be7a] focus:border-2 py-2.5 px-4 text-base focus:outline-none transition-colors duration-500"
             />
           </div>
           <div className="mb-3">
@@ -66,7 +66,7 @@ const SignUpForm = () => {
               value={form.password}
               onChange={handleChange}
               placeholder="Enter minimum 8 characters"
-              className="w-full rounded-lg bg-[#f7f7fa] border border-[#dddddd] focus:border-[#f7be7a] focus:border-2 py-2.5 px-4 text-base focus:outline-none transition-colors duration-500"
+              className="w-full rounded-lg placeholder:text-sm bg-[#f7f7fa] border border-[#dddddd] focus:border-[#f7be7a] focus:border-2 py-2.5 px-4 text-base focus:outline-none transition-colors duration-500"
             />
           </div>
           <div className="mb-5">
@@ -77,12 +77,12 @@ const SignUpForm = () => {
               value={form.confirmPassword}
               onChange={handleChange}
               placeholder="Re-enter  password"
-              className="w-full rounded-lg bg-[#f7f7fa] border border-[#dddddd] focus:border-[#f7be7a] focus:border-2 py-2.5 px-4 text-base focus:outline-none transition-colors duration-500"
+              className="w-full rounded-lg placeholder:text-sm bg-[#f7f7fa] border border-[#dddddd] focus:border-[#f7be7a] focus:border-2 py-2.5 px-4 text-base focus:outline-none transition-colors duration-500"
             />
           </div>
           <button
             type="submit"
-            className="w-full py-3 cursor-pointer rounded-lg bg-[#2AAE77] text-white font-semibold text-lg mt-2 transition duration-200"
+            className="w-full py-3 cursor-pointer rounded-lg placeholder:text-sm bg-[#2AAE77] text-white font-semibold text-lg mt-2 transition duration-200"
           >
             Continue
           </button>
