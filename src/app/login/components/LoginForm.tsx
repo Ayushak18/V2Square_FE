@@ -3,14 +3,11 @@
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 
-const SignUpForm = () => {
+const LoginForm = () => {
   const router = useRouter();
   const [form, setForm] = useState({
-    fullName: "",
     email: "",
-    phone: "",
     password: "",
-    confirmPassword: "",
   });
 
   function handleChange(e: any) {
@@ -21,29 +18,16 @@ const SignUpForm = () => {
     <>
       <div className="max-w-md mx-auto rounded-2xl shadow-md bg-white px-6 py-8">
         <h2 className="text-3xl font-semibold text-center">
-          Create a new account
+          Login to your account
         </h2>
-        <a
-          className="block text-center text-[#f7be7a] cursor-pointer font-semibold mt-[8px] mb-2"
-          onClick={() => router.push("/login")}
-          href="#"
+        <a className="block text-center text-[#f7be7a] cursor-pointer font-semibold mt-[8px] mb-2" onClick={() => router.push("/signUp")} href="#">Don't have an account?</a>
+        {/* <a
+          onClick={() => router.push("/signUp")}
+          className="text-center text-[#f7be7a] cursor-pointer font-semibold mt-[8px] mb-2"
         >
-          {" "}
-          Already have an account?
-        </a>
-
+          Don't have an account?
+        </a> */}
         <form>
-          <div className="mb-3">
-            <label className="block text-[15px] mb-1">Full Name</label>
-            <input
-              type="text"
-              name="fullName"
-              value={form.fullName}
-              onChange={handleChange}
-              placeholder="Full Name"
-              className="w-full rounded-lg placeholder:text-sm bg-[#f7f7fa] border border-[#dddddd] focus:border-[#f7be7a] focus:border-2 py-2.5 px-4 text-base focus:outline-none transition-colors duration-500"
-            />
-          </div>
           <div className="mb-3">
             <label className="block text-[15px] mb-1">Email</label>
             <input
@@ -55,19 +39,9 @@ const SignUpForm = () => {
               className="w-full rounded-lg placeholder:text-sm bg-[#f7f7fa] border border-[#dddddd] focus:border-[#f7be7a] focus:border-2 py-2.5 px-4 text-base focus:outline-none transition-colors duration-500"
             />
           </div>
+
           <div className="mb-3">
-            <label className="block text-[15px] mb-1">Phone number</label>
-            <input
-              type="tel"
-              name="phone"
-              value={form.phone}
-              onChange={handleChange}
-              placeholder="00000-00000"
-              className="w-full rounded-lg placeholder:text-sm bg-[#f7f7fa] border border-[#dddddd] focus:border-[#f7be7a] focus:border-2 py-2.5 px-4 text-base focus:outline-none transition-colors duration-500"
-            />
-          </div>
-          <div className="mb-3">
-            <label className="block text-[15px] mb-1">Create Password</label>
+            <label className="block text-[15px] mb-1">Password</label>
             <input
               type="password"
               name="password"
@@ -77,22 +51,12 @@ const SignUpForm = () => {
               className="w-full rounded-lg placeholder:text-sm bg-[#f7f7fa] border border-[#dddddd] focus:border-[#f7be7a] focus:border-2 py-2.5 px-4 text-base focus:outline-none transition-colors duration-500"
             />
           </div>
-          <div className="mb-5">
-            <label className="block text-[15px] mb-1">Confirm Password</label>
-            <input
-              type="password"
-              name="confirmPassword"
-              value={form.confirmPassword}
-              onChange={handleChange}
-              placeholder="Re-enter  password"
-              className="w-full rounded-lg placeholder:text-sm bg-[#f7f7fa] border border-[#dddddd] focus:border-[#f7be7a] focus:border-2 py-2.5 px-4 text-base focus:outline-none transition-colors duration-500"
-            />
-          </div>
+
           <button
             type="submit"
             className="w-full py-3 cursor-pointer rounded-lg placeholder:text-sm bg-[#2AAE77] text-white font-semibold text-lg mt-2 transition duration-200"
           >
-            Continue
+            Login
           </button>
         </form>
         <p className="text-center mt-6 text-[#888] text-[13px]">
@@ -108,4 +72,4 @@ const SignUpForm = () => {
   );
 };
 
-export default SignUpForm;
+export default LoginForm;
