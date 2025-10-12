@@ -1,5 +1,5 @@
 import { Cabin } from "next/font/google";
-import { Menu } from "lucide-react";
+import { Bell, Menu, MessageSquare } from "lucide-react";
 
 const cabin = Cabin({
   subsets: ["latin"],
@@ -18,14 +18,26 @@ const TopNavBar = ({ toggleNav }: { toggleNav?: () => void }) => {
         <Menu className="w-6 h-6" />
       </button>
 
-      <p
-        className={
-          cabin.className +
-          " font-medium text-lg md:text-2xl truncate"
-        }
-      >
-        Welcome, Ayush Kamboj
-      </p>
+      <div className="flex justify-between items-center w-full">
+        <p
+          className={
+            cabin.className + " font-medium text-lg md:text-2xl truncate"
+          }
+        >
+          Welcome, Ayush Kamboj
+        </p>
+
+        <div>
+          <button className="mx-4 cursor-pointer bg-[#E9EEF6] rounded-md px-6 py-2 text-[#48464c] font-semibold text-sm">
+            {" "}
+            <MessageSquare className="inline-block mr-1 w-6 h-5" /> Messages
+          </button>
+          <button className="bg-[#E9EEF6] cursor-pointer rounded-md px-6 py-2 text-[#48464c] font-semibold text-sm">
+            <Bell className="inline-block mr-1 w-6 h-5" />
+            Notifications
+          </button>
+        </div>
+      </div>
     </div>
   );
 };
