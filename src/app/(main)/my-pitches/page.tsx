@@ -1,14 +1,17 @@
 import { Metadata } from "next";
+import MyPitchesPage from "./components";
 
 export const metadata: Metadata = {
-  title: 'My Pitches | V2Square',
-  description: 'Showcase and manage your professional pitches with V2Square.',
-}
+  title: "My Pitches | V2Square",
+  description: "Showcase and manage your professional pitches with V2Square.",
+};
 
 const MyPitches = () => {
   return (
     <>
-      <h1>My Pitches</h1>
+      <div className="bg-[#f5f5f7] h-[calc(100vh-70px)]">
+        <MyPitchesPage />
+      </div>
     </>
   );
 };
