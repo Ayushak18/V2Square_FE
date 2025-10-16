@@ -1,16 +1,17 @@
 import { Metadata } from "next";
+import NewRequestPage from "./components";
 
 export const metadata: Metadata = {
   title: "New Request | V2Square",
   description: "Create and submit new professional requests with V2Square.",
 };
 
-const NewRequestPage = () => {
+const NewRequest = () => {
   return (
     <>
-      <h1>Hey I am the new request page</h1>
+      <NewRequestPage />
     </>
   );
 };
 
-export default NewRequestPage;
+export default NewRequest;
