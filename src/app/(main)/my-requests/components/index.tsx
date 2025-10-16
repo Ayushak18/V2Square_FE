@@ -1,4 +1,7 @@
+"use client";
+
 import StatusTable from "./request-table";
+import { useRouter } from "next/navigation";
 
 const tableData: any = [
   {
@@ -36,12 +39,16 @@ const tableData: any = [
 ];
 
 const MyRequestPage = () => {
+  const router = useRouter();
   return (
     <>
       <div className="py-4 px-6 bg-[#f5f5f7] h-[calc(100vh-70px)]">
         <div className="flex justify-between items-center">
           <h1 className="text-[#48464c] font-semibold text-xl">My Requests</h1>
-          <button className="cursor-pointer bg-[#2AAE77] font-semibold text-sm px-4 py-2 rounded-lg text-white">
+          <button
+            onClick={() => router.push("/my-requests/new-request")}
+            className="cursor-pointer bg-[#2AAE77] font-semibold text-sm px-4 py-2 rounded-lg text-white"
+          >
             Post New Request
           </button>
         </div>

@@ -28,6 +28,7 @@ const SideNav = ({ closeNav }: { closeNav?: () => void }) => {
       label: "My Requests",
       icon: <GitPullRequest className="w-4 h-4" />,
       path: "/my-requests",
+      subPath: "/my-requests/new-request",
       activeBg: "bg-[#ffe6c3] border border-[#ee8c1d]",
       defaultBg: "border border-[#f0daff]",
     },
@@ -85,7 +86,7 @@ const SideNav = ({ closeNav }: { closeNav?: () => void }) => {
         />
         <nav className="mx-4 my-6 list-none">
           {navItems.map((item, index) => {
-            const isActive = pathname === item.path;
+            const isActive = pathname === item.path || pathname === item.subPath;
 
             return (
               <li
